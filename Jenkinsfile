@@ -18,7 +18,7 @@ pipeline {
         stage('Eliminando imagenes antiguas') {
             steps {
                sh  '''
-                IMAGES=$(docker images -filter "label=com.docker.compose.project=demo" -q)
+                IMAGES=$(docker images --filter "label=com.docker.compose.project=demo" -q)
                 if [ -n "$IMAGES" ]; then
                     docker rmi -f $IMAGES || true
                 else 
