@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Definir variables de entorno si es necesario
-        PATH = "/usr/local/bin/docker:${env.PATH}"
+        PATH = "/usr/local/bin:${env.PATH}"
     }
 
     stages {
