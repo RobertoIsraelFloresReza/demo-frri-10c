@@ -10,4 +10,4 @@ services:
 
 networks:
   demo-net:
-    extenal: true
+    external: true
